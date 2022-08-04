@@ -12,7 +12,7 @@
   --title: 'Staatliches', cursive, sans-serif;
   --text: 'Palanquin', sans-serif;
 
-  --fs-body: clamp(20px, 8px + 3vw, 30px);
+  --fs-body: clamp(20px, 8px + 3vw, 26px);
   --lh-body: clamp(20px, 8px + 3vw, 30px);
 }
 
@@ -101,6 +101,14 @@ h1 {
   animation: topdown 700ms 400ms forwards;
 }
 
+.content div:nth-child(5) {
+  display: none;
+}
+
+.content div:nth-child(6) {
+  display: none;
+}
+
 @keyframes downtop {
   0% {
     opacity: 0;
@@ -128,7 +136,7 @@ h1 {
 @media (min-width: 800px) {
   h1 {
     padding: 20px 0 16px;
-    font-size: 60px;
+    font-size: 48px;
   }
 
   .body p {
@@ -157,6 +165,51 @@ h1 {
 
   .content div:nth-child(4) {
     grid-area: C;
+    margin-top: -200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    display: flex;
+    height: 100vh;
+  }
+
+  .main {
+    width: 30%;
+  }
+
+  .main img {
+    width: 214px;
+  }
+
+  .body p {
+    position: absolute;
+    bottom: 48px;
+    left: 24px;
+    max-width: 20%;
+
+    color: #FFFFFF;
+  }
+
+  .content {
+    width: fit-content;
+    margin: 64px auto 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "A B A"
+    "C D C";
+  }
+
+  .image-box img {
+    padding: 0 16px;
+  }
+
+  .content div:nth-child(5) {
+    display: initial;
+  }
+  
+  .content div:nth-child(6) {
+    display: initial;
     margin-top: -200px;
   }
 }
